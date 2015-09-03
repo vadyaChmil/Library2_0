@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Library2_0</display-name>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:application-context.xml</param-value>
+	</context-param>
+	
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- servlets -->
+	<servlet>
+		<servlet-name>Library</servlet-name>
+		<servlet-class>com.rhcloud.vadyazakusylo.library.servlets.LibraryServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SelectBooks</servlet-name>
+		<servlet-class>com.rhcloud.vadyazakusylo.library.servlets.SelectBooksServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InsertBooks</servlet-name>
+		<servlet-class>com.rhcloud.vadyazakusylo.library.servlets.InsertBooksServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>AddBook</servlet-name>
+		<servlet-class>com.rhcloud.vadyazakusylo.library.servlets.AddBookServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InsertBook</servlet-name>
+		<servlet-class>com.rhcloud.vadyazakusylo.library.servlets.InsertBookServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Library</servlet-name>
+		<url-pattern>/library</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SelectBooks</servlet-name>
+		<url-pattern>/select_books</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertBooks</servlet-name>
+		<url-pattern>/insert_books</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AddBook</servlet-name>
+		<url-pattern>/add_book</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InsertBook</servlet-name>
+		<url-pattern>/insert_book</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>20</session-timeout>
+	</session-config>
+
+	<!-- Define an error handler for 404 pages -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/error404.jsp</location>
+	</error-page>
+
+</web-app>

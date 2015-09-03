@@ -1,0 +1,9 @@
+create table genre (id int(2) not null auto_increment, name varchar(20), primary key (id));
+insert into genre (name) values ('Comedy'), ('Drama'), ('Non Fiction'), ('Realistic Fiction'), 
+	('Romance novel'), ('Satire'), ('Tragedy'), ('Tragicomedy');
+
+create table book (id int(4) not null auto_increment, code int(5) default 0, autor varchar(25), 
+	title varchar(40), year_edition int(4), pages int(4), primary key (id));
+
+create table genre_book (id_genre int(2), id_book int(4), foreign key (id_genre) references 
+	genre (id), foreign key (id_book) references book (id) ON DELETE CASCADE);
