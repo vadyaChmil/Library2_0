@@ -110,7 +110,7 @@ input:focus {
 
 #error {
 	height: 100%;
-	padding-top: 25%;
+	padding: 20%;
 	text-align: center;
 }
 
