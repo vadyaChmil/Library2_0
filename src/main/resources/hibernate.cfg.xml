@@ -23,6 +23,7 @@
 		<!-- Mapped entities -->
 		<mapping class="com.rhcloud.vadyazakusylo.library.entity.Book" />
 		<mapping class="com.rhcloud.vadyazakusylo.library.entity.Genre" />
+		<mapping class="com.rhcloud.vadyazakusylo.library.entity.User" />
 
 	</session-factory>
 </hibernate-configuration>

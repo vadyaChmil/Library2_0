@@ -1,3 +1,6 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -15,8 +18,11 @@
 		</div>
 		<div id="menu">
 			<ul>
-				<li><p><a href="index.html">Home page</a></p></li>
+				<li><p><a href="index.jsp">Home page</a></p></li>
 				<li><p><a href="library">Library</a></p></li>
+				<c:if test="${registered}">
+					<li><p><a href="logout">Log out</a></p></li>
+				</c:if>
 			</ul>
 		</div>
 		<div id="content">
@@ -31,7 +37,7 @@
 			<p>or</p>
 			<img src="images/list03.png" width="368" height="77" title="file">
 			<p></p>
-			<form name="forma" method="post" enctype="multipart/form-data" action="select_books">
+			<form name="forma" method="post" enctype="multipart/form-data" action="add_books">
 				<input name="file" type="File">
 				<input name="submit" type="Submit" value="Send">
 				<input name="reset" type="Reset" value="Reset">

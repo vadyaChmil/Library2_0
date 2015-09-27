@@ -13,7 +13,7 @@ import com.rhcloud.vadyazakusylo.library.exception.DataFormatException;
 import com.rhcloud.vadyazakusylo.library.exception.DataSizeException;
 import com.rhcloud.vadyazakusylo.library.exception.UploadException;
 
-public class SelectBooksServlet extends HttpServletLibrary {
+public class AddBooksServlet extends HttpServletLibrary {
 
 	/**
 	 * Vadya Zakusylo
@@ -29,7 +29,7 @@ public class SelectBooksServlet extends HttpServletLibrary {
 			request.getSession().setAttribute(UPLOAD_BOOK_LIST, uploadBookList);
 			List<Genre> genreList = genreDao.getGenreList();
 			request.setAttribute(GENRE_LIST, genreList);
-			request.getRequestDispatcher(SELECT_BOOKS_PAGE).forward(request, response);
+			request.getRequestDispatcher(ADD_BOOKS_PAGE).forward(request, response);
 		} catch (DataFormatException | UploadException | DataSizeException e) {
 			String errorMessage = e.getMessage();
 			request.setAttribute(ERROR_MESSAGE, errorMessage);

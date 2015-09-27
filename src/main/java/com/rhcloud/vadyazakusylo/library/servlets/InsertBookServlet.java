@@ -39,7 +39,7 @@ public class InsertBookServlet extends HttpServletLibrary {
 
 			String message = "Book have loaded to the library";
 			request.setAttribute(MESSAGE, message);
-			request.getRequestDispatcher(INSERT_BOOK_PAGE).forward(request, response);
+			request.getRequestDispatcher(RESULT_PAGE).forward(request, response);
 		} catch (Exception e) {
 			String errorMessage = e.getMessage();
 			request.setAttribute(ERROR_MESSAGE, errorMessage);

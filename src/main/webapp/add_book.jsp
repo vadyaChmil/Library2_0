@@ -18,8 +18,11 @@
 		</div>
 		<div id="menu">
 			<ul>
-				<li><p><a href="index.html">Home page</a></p></li>
+				<li><p><a href="index.jsp">Home page</a></p></li>
 				<li><p><a href="library">Library</a></p></li>
+				<c:if test="${registered}">
+					<li><p><a href="logout">Log out</a></p></li>
+				</c:if>
 			</ul>
 		</div>
 		<div id="content">

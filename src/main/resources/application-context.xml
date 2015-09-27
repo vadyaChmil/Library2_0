@@ -35,14 +35,13 @@
 		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
 		<property name="sessionFactory" ref="sessionFactory" />
 	</bean>
-	
-	<bean id="bookDao"
-		class="com.rhcloud.vadyazakusylo.library.dao_sql.BookDaoSql" />
 
-	<bean id="genreDao"
-		class="com.rhcloud.vadyazakusylo.library.dao_sql.GenreDaoSql" />
-		
-	<bean id="bookBrowser"
-		class="com.rhcloud.vadyazakusylo.library.dao_sql.BookBrowser" />
-	 
+	<bean id="bookDao" class="com.rhcloud.vadyazakusylo.library.dao_sql.BookDaoSql" />
+
+	<bean id="genreDao" class="com.rhcloud.vadyazakusylo.library.dao_sql.GenreDaoSql" />
+
+	<bean id="userDao" class="com.rhcloud.vadyazakusylo.library.dao_sql.UserDaoSql" />
+
+	<bean id="bookBrowser" class="com.rhcloud.vadyazakusylo.library.dao_sql.BookBrowser" />
+
 </beans>

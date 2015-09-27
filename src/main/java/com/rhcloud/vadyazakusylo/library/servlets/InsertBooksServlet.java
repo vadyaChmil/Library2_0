@@ -25,7 +25,7 @@ public class InsertBooksServlet extends HttpServletLibrary {
 			if (request.getParameterValues("bookCode") == null) {
 				String message = "You haven't chosen books for loading";
 				request.setAttribute(MESSAGE, message);
-				request.getRequestDispatcher(INSERT_BOOKS_PAGE).forward(request, response);
+				request.getRequestDispatcher(RESULT_PAGE).forward(request, response);
 			} else {
 				String[] bookCodeString = request.getParameterValues("bookCode");
 				int[] bookCodeInt = new int[bookCodeString.length];
@@ -58,10 +58,9 @@ public class InsertBooksServlet extends HttpServletLibrary {
 				
 				String message = "Chosen books have loaded to the library";
 				// delete uploadedBooksList from memory of session
-				uploadBookList = new ArrayList<>();
-				request.getSession().setAttribute(UPLOAD_BOOK_LIST, uploadBookList);
+				request.getSession().removeAttribute(UPLOAD_BOOK_LIST); 
 				request.setAttribute(MESSAGE, message);
-				request.getRequestDispatcher(INSERT_BOOKS_PAGE).forward(request, response);
+				request.getRequestDispatcher(RESULT_PAGE).forward(request, response);
 			}
 		} catch (Exception e) {
 			String errorMessage = e.getMessage();

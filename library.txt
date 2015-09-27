@@ -7,3 +7,7 @@ create table book (id int(4) not null auto_increment, code int(5) default 0, aut
 
 create table genre_book (id_genre int(2), id_book int(4), foreign key (id_genre) references 
 	genre (id), foreign key (id_book) references book (id) ON DELETE CASCADE);
+	
+create table user (id int(3) not null auto_increment, login varchar(20), name varchar(20), 
+	surname varchar(20), password varchar(30), email varchar(40), registered boolean not null 
+	default 1, unique (login), primary key (id));

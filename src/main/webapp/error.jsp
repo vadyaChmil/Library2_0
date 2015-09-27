@@ -11,6 +11,6 @@
 	<div id="error">
 		<h1 class="error">ERROR</h1>
 		<p>${errorMessage}</p>
-		<p>You can back to <a href="index.html">Home page</a></p>
+		<p>You can back to <a href="index.jsp">Home page</a></p>
 	</div>
 </body>

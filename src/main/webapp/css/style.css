@@ -33,6 +33,24 @@ body {
 	padding: 5px 5px 5px 30px;
 }
 
+	ul {
+		margin-left: -40px;
+		list-style-type: none;
+	}
+	
+	ul li ul {
+		margin-left: -15px;
+		list-style-type: circle;
+	}
+	
+	#library {
+    	display:none;
+	}
+
+	#library:target {
+		display:block;
+	}
+
 #content {
 	text-align: left;
 	margin-left: 200px;
@@ -65,14 +83,14 @@ table {
 	margin: 10px auto;
 }
 
-th, td {
-	text-align: center;
-	padding: 2px 1px;
-}
-
-tr #genre {
-	border-bottom: 1px dotted black;
-}
+	th, td {
+		text-align: center;
+		padding: 2px 1px;
+	}
+	
+	tr #genre {
+		border-bottom: 1px dotted black;
+	}
 
 #genre {
 	font-size: x-small;
@@ -116,19 +134,4 @@ input:focus {
 
 label {
 	cursor: pointer;
-}
-
-ul {
-	margin-left: -40px;
-	list-style-type: none;
-}
-
-li ul {
-	margin-left: -15px;
-	display: none;
-}
-
-li:hover ul {
-	display: block;
-	list-style-type: circle;
 }

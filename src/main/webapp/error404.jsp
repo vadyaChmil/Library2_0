@@ -11,6 +11,6 @@
 	<div id="error">
 		<h1 class="error">A 404 error has occurred</h1>
 		<p>We apologize, but the page you have specified cannot be found</p>
-		<p>You can try go to <a href="index.html">Home page</a> again</p>
+		<p>You can try go to <a href="index.jsp">Home page</a> again</p>
 	</div>
 </body>
