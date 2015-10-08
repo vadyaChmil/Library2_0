@@ -25,8 +25,8 @@
 					<li><p><a href="add_book">Add book</a></p></li>
 				</c:if>
 				<c:if test="${!registered}">
-					<li><p><a href="#login">Upload books<a></a></p></li>
-					<li><p><a href="#login">Add book<a></a></p></li>
+					<li><p><a href="#login">Upload books</a></p></li>
+					<li><p><a href="#login">Add book</a></p></li>
 					<div id="login" class="login">
 						<div>
 							<form method="post" action="login">
